@@ -36,5 +36,50 @@ Component Map : https://www.figma.com/file/ycC2YroZNTkoopGOOt0m02/Tronald-Dump-A
 "self": {
 "href": "http://api.tronalddump.io/author/wVE8Y7BoRKCBkxs1JkqAvw"
 
-## MVP Matrix
-link to MVP Matrix :  https://docs.google.com/spreadsheets/d/1B2oGWlE1GHbfgWwWaoJ4H-k_x5WIHS6xuVi0eVxSG1E/edit?usp=sharing
+# MVP Matrix
+
+
+| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
+| --- | :---: |  :---: | :---: | :---: |
+| Create React app and files for all components | H | 2 | |  |
+| Research | H | 8 |  |  |
+| Navbar & Footer | H | 2 |  |  |
+| React Router | H | 2 |  |  |
+|  Home Page/ About | H | 1 |  |  |
+| Random Quote Generator/ onclick | H | 4 |  |  |
+| Form bar for searching through quotes | H | 3 |  |  |
+| Random Picture/ Gif Generator onClick | M | 3 |  |  |
+| Form for adding Quotes | M | 2 |  |  |
+| Data Component for Gifs/ Pictures | M | 2 |  |  |
+| Adding Content to Data Component | M | 2 |  |  |
+| Responsive Design | H | 4 |  |  |
+| CSS/ Styling | H | 8 |  |  |
+| Implement SASS | M | 3 |  |  |
+
+| Total | H | 44 |  |  |
+
+# Components 
+
+| Component | Description | 
+| --- | :---: |  
+| App | Sets up app with React Router | 
+| Nav | Nav guides to about, random quote generator, and random gif | 
+| Main | Contains Switch/Routes for content |
+| Quote Generator | Renders random quotes on click |
+| Quote Submit form | A form which adds new quotes to the library |
+| Quote Search Form  | Searches through the array of Trump quotes according to keywords and renders to the page |
+| Random Gif Generator | Renders a Random Gif to the page onClick |
+| Random Gif Submit Form | Form that users can submit random pictures/gifs through |
+| Gif-Data Component | Component that stores random gifs in an array |
+| About Page | Displays the about page for the app |
+
+
+# PostMVP 
+- add favorite quotes to a favorites component
+- add ability to search keywords to find different quotes
+
+# Additional Libraries
+-SASS, React Bootstrap
+
+# Code Snippet
+
