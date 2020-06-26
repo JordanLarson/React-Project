@@ -55,7 +55,6 @@ Component Map : https://www.figma.com/file/ycC2YroZNTkoopGOOt0m02/Tronald-Dump-A
 | Responsive Design | H | 4 |  |  |
 | CSS/ Styling | H | 8 |  |  |
 | Implement SASS | M | 3 |  |  |
-
 | Total | H | 44 |  |  |
 
 # Components 
