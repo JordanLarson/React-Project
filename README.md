@@ -72,10 +72,16 @@ Component Map : https://www.figma.com/file/ycC2YroZNTkoopGOOt0m02/Tronald-Dump-A
 | Gif-Data Component | Component that stores random gifs in an array |
 | About Page | Displays the about page for the app |
 
+# MVP example
+- App will allow one to randomly produce Donald Trump quotes, and images through a button. 
+- Navbar toggles between a gif generator, quotes, and about.
+- Search Form allows the user to search for specific quotes with keywords, or dates.
+
 
 # PostMVP 
 - add favorite quotes to a favorites component
-- add ability to search keywords to find different quotes
+- add favorite gifs to a favoriteGifs component
+- add the option for the user to submit their own images/ quotes
 
 # Additional Libraries
 -SASS, React Bootstrap
