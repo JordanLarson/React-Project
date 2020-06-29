@@ -8,6 +8,9 @@ export const DataContext = createContext();
 
 function App(props) {
   const [myQuotes, setMyQuotes] = useState("");
+  const [initialId, setInitialId] = useState("");
+
+  const handleSubmit = async (currentKey) => setInitialId(currentKey);
 
   const addQuote = (element) => {
     setMyQuotes(element);
@@ -29,7 +32,11 @@ function App(props) {
             exact
             path="/Quotes"
             render={(routerProps) => (
-              <Quotes {...routerProps} addQuote={addQuote} />
+              <Quotes
+                {...routerProps}
+                addQuote={addQuote}
+                handleSubmit={handleSubmit}
+              />
             )}
           />
           <Route

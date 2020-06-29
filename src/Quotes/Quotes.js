@@ -7,6 +7,13 @@ const Quotes = (props) => {
   const [quoteInfo, setQuoteInfo] = useState("data.value");
   const [whoIsQuoted, setWhoIsQuoted] = useState("");
   const [urlData, setUrlData] = useState([]);
+  const [input, setInput] = useState("");
+
+  const handleSubmit = (e) => {
+    // preventDefault();
+    handleSubmit(quoteInfo);
+    setInput("");
+  };
 
   useEffect(() => {
     const makeApiCall = async () => {
@@ -27,8 +34,11 @@ const Quotes = (props) => {
   return (
     <div>
       <h3> Donald's Funny Quotes </h3>
-      <h5 key={quoteInfo}> quote: {quoteInfo} </h5>
-      <h5 key={urlData}> referencing: {whoIsQuoted}</h5>
+      <form onSubmit={handleSubmit}>
+        <button>Get New Quote</button>
+        <h5 key={quoteInfo}> quote: {quoteInfo} </h5>
+        <h5 key={urlData}> referencing: {whoIsQuoted}</h5>
+      </form>
     </div>
   );
 };
