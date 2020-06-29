@@ -1,68 +1,93 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## React-Project
 
-## Available Scripts
+Donald Trump random dumb quote/ gif generator titled: 'Donny'
 
-In the project directory, you can run:
+## Project Link
+https://jordanlarson.github.io/React-Project/
 
-### `npm start`
+## Project Description
+I plan on creating a Random Quote/ gif/ picture generator for Donny Trump. This App will produce a random quote onClick, and also provide the option to search for various dumb quotes 
+from the potus. I would also like to add a random gif generator that one can add gifs/ pictures through a form. If I have a time I'd like to add a separate form component
+that one can add their own quotes through. I would also like to implement a search bar that allows one to search through all of the quotes the potus has made throughout his career.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## API link
+link to API: https://www.tronalddump.io/
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `npm test`
+## WireFrames
+WireFrames for App : https://www.figma.com/file/2Js6f2nxHoeygWnWuNZ6SN/Tronald-Dump-Wire-Frames?node-id=0%3A1
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+Component Map : https://www.figma.com/file/ycC2YroZNTkoopGOOt0m02/Tronald-Dump-App-Components?node-id=0%3A1
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Data pulled demo : Random quote:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+"updated_at": "2019-12-13T17:26:27.045Z",
+"value": "Jeb’s policies in Florida helped lead to its almost total collapse. Right after he left he went to work for Lehman Brothers—wow!",
+"_embedded": {
+"author": [
+{
+"author_id": "wVE8Y7BoRKCBkxs1JkqAvw",
+"bio": null,
+"created_at": "2019-12-13T16:43:24.728Z",
+"name": "Donald Trump",
+"slug": "donald-trump",
+"updated_at": "2019-12-13T16:43:24.728Z",
+"_links": {
+"self": {
+"href": "http://api.tronalddump.io/author/wVE8Y7BoRKCBkxs1JkqAvw"
+```
 
-### `npm run eject`
+# MVP Matrix
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
+| --- | :---: |  :---: | :---: | :---: |
+| Create React app and files for all components | H | 2 | |  |
+| Research | H | 8 |  |  |
+| Navbar & Footer | H | 2 |  |  |
+| React Router | H | 2 |  |  |
+|  Home Page/ About | H | 1 |  |  |
+| Random Quote Generator/ onclick | H | 4 |  |  |
+| Form bar for searching through quotes | H | 3 |  |  |
+| Random Picture/ Gif Generator onClick | M | 3 |  |  |
+| Form for adding Quotes | M | 2 |  |  |
+| Data Component for Gifs/ Pictures | M | 2 |  |  |
+| Adding Content to Data Component | M | 2 |  |  |
+| Responsive Design | H | 4 |  |  |
+| CSS/ Styling | H | 8 |  |  |
+| Implement SASS | M | 3 |  |  |
+| Total | H | 44 |  |  |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Components 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+| Component | Description | 
+| --- | :---: |  
+| App | Sets up app with React Router | 
+| Nav | Nav guides to about, random quote generator, and random gif | 
+| Main | Contains Switch/Routes for content |
+| Quote Generator | Renders random quotes on click |
+| Quote Submit form | A form which adds new quotes to the library |
+| Quote Search Form  | Searches through the array of Trump quotes according to keywords and renders to the page |
+| Random Gif Generator | Renders a Random Gif to the page onClick |
+| Random Gif Submit Form | Form that users can submit random pictures/gifs through |
+| Gif-Data Component | Component that stores random gifs in an array |
+| About Page | Displays the about page for the app |
 
-## Learn More
+# MVP example
+- App will allow one to randomly produce Donald Trump quotes, and images through a button. 
+- Navbar toggles between a gif generator, quotes, and about.
+- Search Form allows the user to search for specific quotes with keywords, or dates.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# PostMVP 
+- add favorite quotes to a favorites component
+- add favorite gifs to a favoriteGifs component
+- add the option for the user to submit their own images/ quotes
 
-### Code Splitting
+# Additional Libraries
+-SASS, React Bootstrap
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+# Code Snippet
