@@ -28,6 +28,7 @@ const Quotes = (props) => {
       console.log(data.tags[0]);
       console.log(quoteInfo);
       setQuoteInfo(data.value);
+      setWhoIsQuoted(data.tags[0]);
     };
     makeApiCall();
   }, [i]);
@@ -36,7 +37,7 @@ const Quotes = (props) => {
       <h3> Donald's Funny Quotes </h3>
       <form onSubmit={handleSubmit}>
         <button>Get New Quote</button>
-        <h5 key={quoteInfo}> quote: {quoteInfo} </h5>
+        <h5 key={quoteInfo}> Random Quote: {quoteInfo} </h5>
         <h5 key={urlData}> referencing: {whoIsQuoted}</h5>
       </form>
     </div>
