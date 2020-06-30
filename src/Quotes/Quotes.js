@@ -8,10 +8,11 @@ const Quotes = (props) => {
   const [whoIsQuoted, setWhoIsQuoted] = useState("");
   const [urlData, setUrlData] = useState([]);
   const [input, setInput] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
 
   const handleSubmit = (e) => {
     // preventDefault();
-    handleSubmit(quoteInfo);
+    props.onSubmit(quoteInfo);
     setInput("");
   };
 
@@ -38,7 +39,7 @@ const Quotes = (props) => {
       <form onSubmit={handleSubmit}>
         <button>Get New Quote</button>
         <h5 key={quoteInfo}> Random Quote: {quoteInfo} </h5>
-        <h5 key={urlData}> referencing: {whoIsQuoted}</h5>
+        <h5 key={whoIsQuoted}> referencing: {whoIsQuoted}</h5>
       </form>
     </div>
   );

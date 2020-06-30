@@ -35,7 +35,7 @@ function App(props) {
               <Quotes
                 {...routerProps}
                 addQuote={addQuote}
-                handleSubmit={handleSubmit}
+                onSubmit={handleSubmit}
               />
             )}
           />
