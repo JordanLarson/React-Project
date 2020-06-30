@@ -50,7 +50,7 @@ function App(props) {
           <Route
             path="/Search"
             render={(routerProps) => (
-              <Search {...routerProps} onSubmite={handleSubmit} />
+              <Search {...routerProps} onSubmit={handleSubmit} />
             )}
           />
         </main>
