@@ -1,8 +1,9 @@
 import React, { useState, useEffect, createContext } from "react";
-import "./App.css";
+import "./App.scss";
 import { Route, Link } from "react-router-dom";
 import Quotes from "./Quotes/Quotes";
-import MyGifs from "./Gifs/Gifs";
+import MyMemes from "./Meme/Memes";
+import Search from "./Search/Search";
 
 export const DataContext = createContext();
 
@@ -23,8 +24,11 @@ function App(props) {
           <Link to="/Quotes">
             <h3>Quotes</h3>
           </Link>
-          <Link to="/MyGifs">
-            <h3>Gifs</h3>
+          <Link to="/MyMemes">
+            <h3>Memes</h3>
+          </Link>
+          <Link to="/Search">
+            <h3> Search Quotes</h3>
           </Link>
         </nav>
         <main>
@@ -40,8 +44,14 @@ function App(props) {
             )}
           />
           <Route
-            path="/MyGifs"
-            render={(routerProps) => <MyGifs {...routerProps} />}
+            path="/MyMemes"
+            render={(routerProps) => <MyMemes {...routerProps} />}
+          />
+          <Route
+            path="/Search"
+            render={(routerProps) => (
+              <Search {...routerProps} onSubmite={handleSubmit} />
+            )}
           />
         </main>
       </div>

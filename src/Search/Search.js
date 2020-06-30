@@ -1,59 +1,49 @@
 import React, { useState, useEffect } from "react";
 
-function Search(props) {
-    const [search, setSearch] = useState("")
-    const [searchUrl, setSearchUrl]
-    useEffect(() => {
-        const makeApiCall = async () => {
-            let searchUrl = "https://api.tronalddump.io/search/quote"
-            let userChoice = {userChoice}
-            const res =await fetch(search)
-            const searchUrl = data.tags[userChoice];
-            console.log(data.tags[0]);
+const Search = (props) => {
+  const [quoteInfo, setQuoteInfo] = useState("data.value");
+  const [whoIsQuoted, setWhoIsQuoted] = useState("");
+  const [searchTermPartial, setSearchTermPartial] = useState("");
 
-        }
-        
-    })
-    return (
-        <div className = "searchbar">
-            <form>
-                
-                </form> 
+  const handleChange = (e) => {
+    console.log("handleChange clicked", e.target.value);
+    setSearchTermPartial(e.target.value);
+  };
 
-        </div> 
-    )
-}
-export default Search
+  useEffect(() => {
+    const makeApiCall = async () => {
+      const urlData = `https://api.tronalddump.io/search/quote?query=${searchTermPartial}`;
+      const res = await fetch(urlData);
+      const data = await res.json();
+      if (data.count > 0) {
+        const quoteCount = data._embedded.quotes.length;
+        const quoteIndex = Math.floor(Math.random() * quoteCount);
+        const quote = data._embedded.quotes[quoteIndex];
 
-// function Search(props) {
-//   const [input, setInput] = useState("");
-//   const handleChange = e => {
-//     console.log("handleChange clicked", e.target.value);
-//     const userInput = e.target.value;
-//     setInput(userInput);
-//   };
-//   const handleSubmit = e => {
-//     e.preventDefault();
-//     console.log("handleSubmit clicked");
-//     // input === "" ? props.onSubmitFromApp(60076) : props.onSubmitFromApp(input);
-//     props.onSubmitFromApp(input);
-//     setInput("");
-//   };
-//   return (
-//     <div className="create-new">
-//       <form onSubmit={handleSubmit}>
-//         <h3>Enter your zipcode</h3>
-//         <input
-//           type="text"
-//           placeholder=""
-//           onChange={handleChange}
-//           value={input}
-//         />
-//         <button>SUBMIT</button>
-//       </form>
-// <hr/>
-//     </div>
-//   );
-// }
+        setQuoteInfo("Quote " + quote.value);
+        setWhoIsQuoted("Referencing " + quote.tags[0]);
+      } else {
+        setQuoteInfo("Try a new search");
+        setWhoIsQuoted("");
+      }
+    };
+    makeApiCall();
+  }, [searchTermPartial]);
+  return (
+    <div>
+      <form>
+        <h3>Search for a quote</h3>
+        <input
+          type="text"
+          placeholder=""
+          onChange={handleChange}
+          value={searchTermPartial}
+        />
+      </form>
+      <h5 key={quoteInfo}> {quoteInfo} </h5>
+      <h5 key={whoIsQuoted}>{whoIsQuoted}</h5>
+    </div>
+  );
+};
 
-// export default Search;
+export default Search;

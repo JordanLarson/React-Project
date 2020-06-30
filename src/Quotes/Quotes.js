@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { DataContext } from "../App";
+// import Search from "./Search/Search";
 
 let i = 1;
 
@@ -41,11 +43,11 @@ const Quotes = (props) => {
         <h5 key={quoteInfo}> Random Quote: {quoteInfo} </h5>
         <h5 key={whoIsQuoted}> referencing: {whoIsQuoted}</h5>
       </form>
+      {/* <DataContext.Provider value={handleSubmit}>
+        <Search handleSubmit={handleSubmit} quoteInfo={quoteInfo} />
+      </DataContext.Provider> */}
     </div>
   );
 };
 
 export default Quotes;
-// {quoteInfo.localeCompare((element, value) => {
-// return
-// key={props.data.id};})}
