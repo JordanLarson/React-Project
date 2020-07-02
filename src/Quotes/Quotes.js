@@ -1,21 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { DataContext } from "../App";
 import "./Quotes.scss";
-
-let i = 1;
 
 const Quotes = (props) => {
   const [quoteInfo, setQuoteInfo] = useState("data.value");
   const [whoIsQuoted, setWhoIsQuoted] = useState("");
-  const [urlData, setUrlData] = useState([]);
-  const [input, setInput] = useState("");
-  const [searchTerm, setSearchTerm] = useState("");
-
-  const handleSubmit = (e) => {
-    props.onSubmit(quoteInfo);
-    setInput("");
-  };
 
   useEffect(() => {
     const makeApiCall = async () => {
@@ -23,7 +11,6 @@ const Quotes = (props) => {
       const res = await fetch(urlData);
       const data = await res.json();
       const quoteInfo = data.value;
-      const whoIsQuoted = data.tags[0];
       console.log(data);
       console.log(data.value);
       console.log(data.appeared_at);
@@ -33,11 +20,11 @@ const Quotes = (props) => {
       setWhoIsQuoted(data.tags[0]);
     };
     makeApiCall();
-  }, [i]);
+  }, []);
   return (
     <div>
       <h4> Donald's Funny Quotes </h4>
-      <form onSubmit={handleSubmit}>
+      <form>
         <button>Get New Quote</button>
         <h5 key={quoteInfo}> Random Quote: {quoteInfo} </h5>
         <h5 key={whoIsQuoted}> referencing: {whoIsQuoted}</h5>

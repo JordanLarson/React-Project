@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext } from "react";
+import React, { createContext } from "react";
 import "./App.scss";
 import { Route, Link } from "react-router-dom";
 import Quotes from "./Quotes/Quotes";
@@ -9,14 +9,6 @@ import About from "./About/About";
 export const DataContext = createContext();
 
 function App(props) {
-  const [myQuotes, setMyQuotes] = useState("");
-  const [initialId, setInitialId] = useState("");
-
-  const handleSubmit = async (currentKey) => setInitialId(currentKey);
-
-  const addQuote = (element) => {
-    setMyQuotes(element);
-  };
   return (
     <div className="App">
       <div>
@@ -51,13 +43,7 @@ function App(props) {
           <Route
             exact
             path="/Quotes"
-            render={(routerProps) => (
-              <Quotes
-                {...routerProps}
-                addQuote={addQuote}
-                onSubmit={handleSubmit}
-              />
-            )}
+            render={(routerProps) => <Quotes {...routerProps} />}
           />
           <Route
             path="/MyMemes"
@@ -65,9 +51,7 @@ function App(props) {
           />
           <Route
             path="/Search"
-            render={(routerProps) => (
-              <Search {...routerProps} onSubmit={handleSubmit} />
-            )}
+            render={(routerProps) => <Search {...routerProps} />}
           />
           <Route
             path="/About"
