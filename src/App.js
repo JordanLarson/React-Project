@@ -1,6 +1,6 @@
 import React, { createContext } from "react";
 import "./App.scss";
-import { Route, Link } from "react-router-dom";
+import { Route, Link, Redirect } from "react-router-dom";
 import Quotes from "./Quotes/Quotes";
 import MyMemes from "./Memes/Memes";
 import Search from "./Search/Search";
@@ -57,6 +57,7 @@ function App(props) {
             path="/About"
             render={(routerProps) => <About {...routerProps} />}
           />
+          <Redirect from="/" to="/Quotes" />
         </main>
         <footer>&#169; 2020 </footer>
       </div>

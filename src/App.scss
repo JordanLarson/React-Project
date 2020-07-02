@@ -1,6 +1,7 @@
 @import "_config.scss";
 @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
 
 Html {
   background-color: $yellowCrayola;
@@ -72,7 +73,7 @@ main>.bottom-right {
 }
 
 nav {
-  background-color: $fireBrick;
+  background-color: $yellowCrayola;
   width: 100vw;
   height: 20vh;
   display: flex;
@@ -120,14 +121,14 @@ h1 {
   padding-top: 40px;
   border-radius: 10px;
   color: $textColor;
-  font-weight: 175%;
-  font-family: 'Caveat Brush', cursive;
+  font-family: 'Montserrat', sans-serif;
 
   @media screen and (min-width: $break-medium) {
     display: block;
     background-image: url(https://d.newsweek.com/en/full/607858/adsgads.jpg);
     height: 30vh;
     font-weight: bold;
+    font-size: 30px;
     color: lightskyblue;
   }
 
@@ -135,6 +136,7 @@ h1 {
     background-image: url(https://static.independent.co.uk/s3fs-public/thumbnails/image/2020/05/13/11/trumpbaby.jpg?width=1000);
     color: white;
     font-weight: bolder;
+    font-size: 35px;
     height: 40vh;
 
   }
