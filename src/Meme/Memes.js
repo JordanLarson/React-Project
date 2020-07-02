@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 
 const MyMemes = (props) => {
   const [imageUrl, setImageUrl] = useState("");
@@ -27,8 +26,8 @@ const MyMemes = (props) => {
   return (
     <div>
       <button onClick={buttonClicked}>Get New Gif</button>
+      <h4> Donald Gifs </h4>
       <img src={imageUrl}></img>
-      <h3> Donald Gifs </h3>
     </div>
   );
 };

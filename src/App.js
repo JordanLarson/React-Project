@@ -4,6 +4,7 @@ import { Route, Link } from "react-router-dom";
 import Quotes from "./Quotes/Quotes";
 import MyMemes from "./Meme/Memes";
 import Search from "./Search/Search";
+import About from "./About/About";
 
 export const DataContext = createContext();
 
@@ -19,16 +20,31 @@ function App(props) {
   return (
     <div className="App">
       <div>
-        <h1>Donald Trump Quotes</h1>
+        <h1>#Covfefe</h1>
         <nav className="donnyNav">
-          <Link to="/Quotes">
-            <h3>Quotes</h3>
+          <Link
+            style={{ textDecoration: "none", color: "#292f36" }}
+            to="/Quotes"
+          >
+            <h3 className="topleft">Quotes</h3>
           </Link>
-          <Link to="/MyMemes">
-            <h3>Memes</h3>
+          <Link
+            style={{ textDecoration: "none", color: "#292f36" }}
+            to="/MyMemes"
+          >
+            <h3 className="topRight">Gifs</h3>
           </Link>
-          <Link to="/Search">
-            <h3> Search Quotes</h3>
+          <Link
+            style={{ textDecoration: "none", color: "#292f36" }}
+            to="/Search"
+          >
+            <h3 className="bottomLeft"> Search Quotes</h3>
+          </Link>
+          <Link
+            style={{ textDecoration: "none", color: "#292f36" }}
+            to="/About"
+          >
+            <h3 className="bottomRight"> About </h3>
           </Link>
         </nav>
         <main>
@@ -52,6 +68,10 @@ function App(props) {
             render={(routerProps) => (
               <Search {...routerProps} onSubmit={handleSubmit} />
             )}
+          />
+          <Route
+            path="/About"
+            render={(routerProps) => <About {...routerProps} />}
           />
         </main>
       </div>

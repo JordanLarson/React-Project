@@ -48,6 +48,19 @@ main {
 $break-small: 320px;
 $break-medium: 700px;
 $break-large: 1080px;
+
+main > .topLeft {
+  grid-area: a;
+}
+main > .topRight {
+  grid-area: b;
+}
+main > .bottomLeft {
+  grid-area: c;
+}
+main > .bottomRight {
+  grid-area: d;
+}
 nav {
   background-color: $fireBrick;
   width: 100vw;
@@ -56,27 +69,33 @@ nav {
   flex-direction: row;
   justify-content: space-evenly;
   border-radius: 3px;
-  @media screen and (min-width: $break-small) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  @media screen and (max-width: $break-small) {
+    display: grid;
+    grid-template-areas:
+      "a b"
+      "a b";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    padding-bottom: 20px;
   }
-}
-h3 {
-  background-color: $blueMunsel;
-  width: 20vw;
-  border-radius: 5px;
-  &:hover {
-    background-color: $tealBlue;
-    box-shadow: 10px 10px 10px $textColor;
-    transform: translateX(-10px);
+
+  h3 {
+    background-color: $blueMunsel;
+    width: 20vw;
+    border-radius: 5px;
+    &:hover {
+      background-color: $tealBlue;
+      box-shadow: 10px 10px 10px $textColor;
+      transform: translateX(-10px);
+    }
   }
-}
-h1 {
-  background-color: $yellowCrayola;
-  height: 20vh;
-  padding-top: 40px;
-  border-radius: 10px;
-  color: $fireBrick;
-  font-weight: 175%;
+  h1 {
+    background-color: $yellowCrayola;
+    height: 20vh;
+    padding-top: 40px;
+    border-radius: 10px;
+    color: $fireBrick;
+    font-weight: 175%;
+  }
 }

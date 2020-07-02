@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./Search.scss";
 
 const Search = (props) => {
   const [quoteInfo, setQuoteInfo] = useState("data.value");
@@ -20,8 +21,8 @@ const Search = (props) => {
         const quoteIndex = Math.floor(Math.random() * quoteCount);
         const quote = data._embedded.quotes[quoteIndex];
 
-        setQuoteInfo("Quote " + quote.value);
-        setWhoIsQuoted("Referencing " + quote.tags[0]);
+        setQuoteInfo("Quote: " + quote.value);
+        setWhoIsQuoted("Referencing: " + quote.tags[0]);
       } else {
         setQuoteInfo("Try a new search");
         setWhoIsQuoted("");
@@ -32,7 +33,7 @@ const Search = (props) => {
   return (
     <div>
       <form>
-        <h3>Search for a quote</h3>
+        <h4>Search for a quote</h4>
         <input
           type="text"
           placeholder=""

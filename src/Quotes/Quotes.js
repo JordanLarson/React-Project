@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { DataContext } from "../App";
-// import Search from "./Search/Search";
+import "./Quotes.scss";
 
 let i = 1;
 
@@ -13,7 +13,6 @@ const Quotes = (props) => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleSubmit = (e) => {
-    // preventDefault();
     props.onSubmit(quoteInfo);
     setInput("");
   };
@@ -37,15 +36,12 @@ const Quotes = (props) => {
   }, [i]);
   return (
     <div>
-      <h3> Donald's Funny Quotes </h3>
+      <h4> Donald's Funny Quotes </h4>
       <form onSubmit={handleSubmit}>
         <button>Get New Quote</button>
         <h5 key={quoteInfo}> Random Quote: {quoteInfo} </h5>
         <h5 key={whoIsQuoted}> referencing: {whoIsQuoted}</h5>
       </form>
-      {/* <DataContext.Provider value={handleSubmit}>
-        <Search handleSubmit={handleSubmit} quoteInfo={quoteInfo} />
-      </DataContext.Provider> */}
     </div>
   );
 };
