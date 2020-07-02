@@ -92,7 +92,7 @@ Component Map : https://www.figma.com/file/ycC2YroZNTkoopGOOt0m02/Tronald-Dump-A
 
 # Code Snippet
 
-if (data.count > 0) {
+`if (data.count > 0) {
         const quoteCount = data._embedded.quotes.length;
         const quoteIndex = Math.floor(Math.random() * quoteCount);
-        const quote = data._embedded.quotes[quoteIndex];
+        const quote = data._embedded.quotes[quoteIndex];`
