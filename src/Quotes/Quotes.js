@@ -16,7 +16,6 @@ const Quotes = (props) => {
       const urlData = "https://api.tronalddump.io/random/quote";
       const res = await fetch(urlData);
       const data = await res.json();
-      const quoteInfo = data.value;
       setQuoteInfo("Quote: " + data.value);
       setWhoIsQuoted("Referencing: " + data.tags[0]);
     };
