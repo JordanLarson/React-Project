@@ -27,7 +27,7 @@ const MyMemes = (props) => {
     <div>
       <button onClick={buttonClicked}>Get New Gif</button>
       <h4> Donald Gifs </h4>
-      <img alt="The Meme" src={imageUrl}></img>
+      <img className="gifImage" alt="The Meme" src={imageUrl}></img>
     </div>
   );
 };

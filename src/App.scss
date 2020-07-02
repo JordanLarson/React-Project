@@ -1,7 +1,9 @@
 @import "_config.scss";
+
 Html {
   background-color: $tealBlue;
 }
+
 .App {
   text-align: center;
 }
@@ -36,6 +38,7 @@ Html {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -45,22 +48,27 @@ main {
   background-color: $sandyBrown;
   @include flexEverythingCenter();
 }
+
 $break-small: 320px;
 $break-medium: 700px;
 $break-large: 1080px;
 
-main > .topLeft {
+main>.topLeft {
   grid-area: a;
 }
-main > .topRight {
+
+main>.topRight {
   grid-area: b;
 }
-main > .bottomLeft {
+
+main>.bottomLeft {
   grid-area: c;
 }
-main > .bottomRight {
+
+main>.bottomRight {
   grid-area: d;
 }
+
 nav {
   background-color: $fireBrick;
   width: 100vw;
@@ -69,6 +77,7 @@ nav {
   flex-direction: row;
   justify-content: space-evenly;
   border-radius: 3px;
+
   @media screen and (max-width: $break-small) {
     display: grid;
     grid-template-areas:
@@ -79,23 +88,35 @@ nav {
     justify-items: center;
     padding-bottom: 20px;
   }
+}
 
-  h3 {
-    background-color: $blueMunsel;
-    width: 20vw;
-    border-radius: 5px;
-    &:hover {
-      background-color: $tealBlue;
-      box-shadow: 10px 10px 10px $textColor;
-      transform: translateX(-10px);
-    }
+h3 {
+  background-color: $blueMunsel;
+  width: 20vw;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: $tealBlue;
+    box-shadow: 10px 10px 10px $textColor;
+    transform: translateX(-10px);
   }
-  h1 {
-    background-color: $yellowCrayola;
-    height: 20vh;
-    padding-top: 40px;
-    border-radius: 10px;
-    color: $fireBrick;
-    font-weight: 175%;
+}
+
+h1 {
+  background-color: $yellowCrayola;
+  height: 20vh;
+  padding-top: 40px;
+  border-radius: 10px;
+  color: $fireBrick;
+  font-weight: 175%;
+}
+
+
+img {
+  max-width: 100%;
+  background-size: contain;
+
+  @media screen and (max-width: $break-small) {
+    max-width: 300px;
   }
 }

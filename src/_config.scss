@@ -13,7 +13,9 @@ $textColor: #292f36;
   flex-direction: row;
   flex-wrap: wrap;
   height: 80vh;
+  width: 100vw;
 }
+
 @mixin cards() {
   height: 100vh;
   width: 90vw;
