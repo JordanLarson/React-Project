@@ -4,7 +4,6 @@
 
 Html {
   background-color: $yellowCrayola;
-  // font-family:
 }
 
 .App {
@@ -98,7 +97,9 @@ nav {
 h3 {
   background-color: $blueMunsel;
   width: 20vw;
+  height: 35px;
   border-radius: 5px;
+  padding-bottom: 10px;
 
 
   &:hover {
@@ -106,7 +107,7 @@ h3 {
     box-shadow: 10px 10px 10px $textColor;
     transform: translateX(-10px);
     transition-duration: 1s;
-    opacity: 90%;
+    // opacity: 90%;
   }
 }
 

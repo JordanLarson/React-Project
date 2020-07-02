@@ -58,6 +58,7 @@ function App(props) {
             render={(routerProps) => <About {...routerProps} />}
           />
         </main>
+        <footer>&#169; 2020 </footer>
       </div>
     </div>
   );
