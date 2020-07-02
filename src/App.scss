@@ -1,7 +1,8 @@
 @import "_config.scss";
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
 
 Html {
-  background-color: $tealBlue;
+  background-color: $yellowCrayola;
   // font-family:
 }
 
@@ -97,6 +98,7 @@ h3 {
   width: 20vw;
   border-radius: 5px;
 
+
   &:hover {
     background-color: $tealBlue;
     box-shadow: 10px 10px 10px $textColor;
@@ -107,7 +109,7 @@ h3 {
 }
 
 h1 {
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTgtd3_30lQDL34xZ-LD0k27BWq52wOhUrCsA&usqp=CAU);
+  background-image: url(https://i.pinimg.com/474x/da/86/e5/da86e57604248a7dfd7c6deaf5c20efc--donald-trump-donald-oconnor.jpg);
   background-repeat: no-repeat;
   background-size: 100vw;
   background-color: #f5ee9e;
@@ -116,12 +118,23 @@ h1 {
   border-radius: 10px;
   color: $textColor;
   font-weight: 175%;
+  font-family: 'Caveat Brush', cursive;
 
   @media screen and (min-width: $break-medium) {
     display: block;
-    // background-image: url()
+    background-image: url(https://d.newsweek.com/en/full/607858/adsgads.jpg);
+    height: 30vh;
+    font-weight: bold;
+    color: lightskyblue;
   }
 
+  @media screen and (min-width: $break-large) {
+    background-image: url(https://static.independent.co.uk/s3fs-public/thumbnails/image/2020/05/13/11/trumpbaby.jpg?width=1000);
+    color: white;
+    font-weight: bolder;
+    height: 40vh;
+
+  }
 }
 
 
