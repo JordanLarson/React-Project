@@ -4,6 +4,12 @@ import "./Quotes.scss";
 const Quotes = (props) => {
   const [quoteInfo, setQuoteInfo] = useState("data.value");
   const [whoIsQuoted, setWhoIsQuoted] = useState("");
+  const [buttonClick, setButtonClick] = useState(0);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setButtonClick(buttonClick + 1);
+  };
 
   useEffect(() => {
     const makeApiCall = async () => {
@@ -20,12 +26,12 @@ const Quotes = (props) => {
       setWhoIsQuoted(data.tags[0]);
     };
     makeApiCall();
-  }, []);
+  }, [buttonClick]);
   return (
     <div>
       <h4> Donald's Funny Quotes </h4>
       <form>
-        <button>Get New Quote</button>
+        <button onClick={handleSubmit}>Get New Quote</button>
         <h5 key={quoteInfo}> Random Quote: {quoteInfo} </h5>
         <h5 key={whoIsQuoted}> referencing: {whoIsQuoted}</h5>
       </form>
