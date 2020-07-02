@@ -1,5 +1,6 @@
 @import "_config.scss";
 @import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 Html {
   background-color: $yellowCrayola;
@@ -77,6 +78,7 @@ nav {
   height: 20vh;
   display: flex;
   flex-direction: row;
+  font-family: 'Ubuntu', sans-serif;
   justify-content: space-evenly;
   border-radius: 3px;
 
