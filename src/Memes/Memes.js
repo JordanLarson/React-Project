@@ -13,12 +13,10 @@ const MyMemes = (props) => {
       const urlData = `https://api.giphy.com/v1/gifs/search?api_key=${myKey}&q=trump`;
       const res = await fetch(urlData);
       const data = await res.json();
-      console.log(imageIndex);
 
       if (imageIndex >= data.data.length - 1) {
         setImageIndex(0);
       }
-      console.log(data);
       setImageUrl(data.data[imageIndex].images.fixed_height.url);
     };
     makeApiCall();

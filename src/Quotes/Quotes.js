@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Quotes.scss";
 
 const Quotes = (props) => {
-  const [quoteInfo, setQuoteInfo] = useState("data.value");
+  const [quoteInfo, setQuoteInfo] = useState("");
   const [whoIsQuoted, setWhoIsQuoted] = useState("");
   const [buttonClick, setButtonClick] = useState(0);
 
@@ -17,13 +17,8 @@ const Quotes = (props) => {
       const res = await fetch(urlData);
       const data = await res.json();
       const quoteInfo = data.value;
-      console.log(data);
-      console.log(data.value);
-      console.log(data.appeared_at);
-      console.log(data.tags[0]);
-      console.log(quoteInfo);
-      setQuoteInfo(data.value);
-      setWhoIsQuoted(data.tags[0]);
+      setQuoteInfo("Quote: " + data.value);
+      setWhoIsQuoted("Referencing: " + data.tags[0]);
     };
     makeApiCall();
   }, [buttonClick]);
@@ -32,8 +27,8 @@ const Quotes = (props) => {
       <h4> Donald's Funny Quotes </h4>
       <form>
         <button onClick={handleSubmit}>Get New Quote</button>
-        <h5 key={quoteInfo}> Random Quote: {quoteInfo} </h5>
-        <h5 key={whoIsQuoted}> referencing: {whoIsQuoted}</h5>
+        <h5 key="quoteInfo"> {quoteInfo} </h5>
+        <h5 key="whoIsQuoted"> {whoIsQuoted}</h5>
       </form>
     </div>
   );

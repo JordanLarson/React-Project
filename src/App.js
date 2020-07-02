@@ -2,7 +2,7 @@ import React, { createContext } from "react";
 import "./App.scss";
 import { Route, Link } from "react-router-dom";
 import Quotes from "./Quotes/Quotes";
-import MyMemes from "./Meme/Memes";
+import MyMemes from "./Memes/Memes";
 import Search from "./Search/Search";
 import About from "./About/About";
 
@@ -13,30 +13,30 @@ function App(props) {
     <div className="App">
       <div>
         <h1>#Covfefe</h1>
-        <nav className="donnyNav">
+        <nav className="donny-nav">
           <Link
             style={{ textDecoration: "none", color: "#292f36" }}
             to="/Quotes"
           >
-            <h3 className="topleft">Quotes</h3>
+            <h3 className="top-left">Quotes</h3>
           </Link>
           <Link
             style={{ textDecoration: "none", color: "#292f36" }}
-            to="/MyMemes"
+            to="/Memes"
           >
-            <h3 className="topRight">Gifs</h3>
+            <h3 className="top-right">Gifs</h3>
           </Link>
           <Link
             style={{ textDecoration: "none", color: "#292f36" }}
             to="/Search"
           >
-            <h3 className="bottomLeft"> Search Quotes</h3>
+            <h3 className="bottom-left"> Search Quotes</h3>
           </Link>
           <Link
             style={{ textDecoration: "none", color: "#292f36" }}
             to="/About"
           >
-            <h3 className="bottomRight"> About </h3>
+            <h3 className="bottom-right"> About </h3>
           </Link>
         </nav>
         <main>
@@ -46,7 +46,7 @@ function App(props) {
             render={(routerProps) => <Quotes {...routerProps} />}
           />
           <Route
-            path="/MyMemes"
+            path="/Memes"
             render={(routerProps) => <MyMemes {...routerProps} />}
           />
           <Route

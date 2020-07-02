@@ -2,12 +2,11 @@ import React, { useState, useEffect } from "react";
 import "./Search.scss";
 
 const Search = (props) => {
-  const [quoteInfo, setQuoteInfo] = useState("data.value");
+  const [quoteInfo, setQuoteInfo] = useState("Try a new search");
   const [whoIsQuoted, setWhoIsQuoted] = useState("");
   const [searchTermPartial, setSearchTermPartial] = useState("");
 
   const handleChange = (e) => {
-    console.log("handleChange clicked", e.target.value);
     setSearchTermPartial(e.target.value);
   };
 
@@ -41,8 +40,8 @@ const Search = (props) => {
           value={searchTermPartial}
         />
       </form>
-      <h5 key={quoteInfo}> {quoteInfo} </h5>
-      <h5 key={whoIsQuoted}>{whoIsQuoted}</h5>
+      <h5 key="quoteInfo"> {quoteInfo} </h5>
+      <h5 key="whoIsQuoted">{whoIsQuoted}</h5>
     </div>
   );
 };

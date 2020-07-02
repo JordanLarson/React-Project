@@ -53,19 +53,19 @@ $break-small: 320px;
 $break-medium: 700px;
 $break-large: 1080px;
 
-main>.topLeft {
+main>.top-left {
   grid-area: a;
 }
 
-main>.topRight {
+main>.top-right {
   grid-area: b;
 }
 
-main>.bottomLeft {
+main>.bottom-left {
   grid-area: c;
 }
 
-main>.bottomRight {
+main>.bottom-right {
   grid-area: d;
 }
 
