@@ -26,7 +26,9 @@ const Quotes = (props) => {
     <div>
       <h4> Donald's Funny Quotes </h4>
       <form>
-        <button onClick={handleSubmit}>Get New Quote</button>
+        <button onClick={handleSubmit}>
+          <span>Get New Quote</span>
+        </button>
         <h5 key="quoteInfo"> {quoteInfo} </h5>
         <h5 key="whoIsQuoted"> {whoIsQuoted}</h5>
       </form>

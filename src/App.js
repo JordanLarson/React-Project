@@ -12,7 +12,7 @@ function App(props) {
   return (
     <div className="App">
       <div>
-        <h1>#Covfefe</h1>
+        <h1>Donald Trump's Quotes</h1>
         <nav className="donny-nav">
           <Link
             style={{ textDecoration: "none", color: "#292f36" }}
