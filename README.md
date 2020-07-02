@@ -46,7 +46,7 @@ Component Map : https://www.figma.com/file/ycC2YroZNTkoopGOOt0m02/Tronald-Dump-A
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Create React app and files for all components | H | 2 | 2| 1 |
-| Research | H | 8 | 8 | 6 |
+| Research | H | 8 | 8 | 10 |
 | Navbar & Footer | H | 2 | 2 | 4 |
 | React Router | H | 2 | 2 | 1 |
 |  Home Page/ About | H | 1 | 1 | 1 |
@@ -59,7 +59,7 @@ Component Map : https://www.figma.com/file/ycC2YroZNTkoopGOOt0m02/Tronald-Dump-A
 | Responsive Design | H | 4 | 4 | 4 |
 | CSS/ Styling | H | 8 | 8 | 6 |
 | Implement SASS | M | 3 | 3 | 2 |
-| Total | H | 44 | 44 |  |
+| Total | H | 44 | 44 | 43 |
 
 # Components 
 
