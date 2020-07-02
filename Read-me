@@ -32,3 +32,8 @@ Data pulled demo : Random quote:
 
 
 link to MVP Matrix :  https://docs.google.com/spreadsheets/d/1B2oGWlE1GHbfgWwWaoJ4H-k_x5WIHS6xuVi0eVxSG1E/edit?usp=sharing
+
+
+Bugs & Fixes: The first bug I had was with useEffect call in my quotes component. I fixed this after a couple of hours of trouble-shooting and found that I was just using the wrong state for buttonClick. I had initially set useState to an empty string when all it needed to be set to was a value of zero.
+My next issue came with my search component. I was able to search for quotes, but the quote would always return the same quote. I later realized this had to do with the index being referenced in the data. I then set the index equal to math random, and multiplied by the length of the array of quotes returned for the specific search term, and finally used math floor to randomize the search.
+The most frustrating bug I dealt with was the attempt to access the Memes that are supposed to be part of the API, but the data that would return from a console log was unreadable. I ended up using giphy as a second API in order to get my gifs component to function.
