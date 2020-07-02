@@ -5,6 +5,9 @@ Donald Trump random dumb quote/ gif generator titled: 'Donny'
 ## Project Link
 https://jordanlarson.github.io/React-Project/
 
+## Netlify Link
+https://hungry-ride-ec339a.netlify.app
+
 ## Project Description
 I plan on creating a Random Quote/ gif/ picture generator for Donny Trump. This App will produce a random quote onClick, and also provide the option to search for various dumb quotes 
 from the potus. I would also like to add a random gif generator that one can add gifs/ pictures through a form. If I have a time I'd like to add a separate form component
@@ -45,21 +48,21 @@ Component Map : https://www.figma.com/file/ycC2YroZNTkoopGOOt0m02/Tronald-Dump-A
 
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Create React app and files for all components | H | 2 | |  |
-| Research | H | 8 |  |  |
-| Navbar & Footer | H | 2 |  |  |
-| React Router | H | 2 |  |  |
-|  Home Page/ About | H | 1 |  |  |
-| Random Quote Generator/ onclick | H | 4 |  |  |
-| Form bar for searching through quotes | H | 3 |  |  |
-| Random Picture/ Gif Generator onClick | M | 3 |  |  |
-| Form for adding Quotes | M | 2 |  |  |
-| Data Component for Gifs/ Pictures | M | 2 |  |  |
-| Adding Content to Data Component | M | 2 |  |  |
-| Responsive Design | H | 4 |  |  |
-| CSS/ Styling | H | 8 |  |  |
-| Implement SASS | M | 3 |  |  |
-| Total | H | 44 |  |  |
+| Create React app and files for all components | H | 2 | 2| 1 |
+| Research | H | 8 | 8 | 10 |
+| Navbar & Footer | H | 2 | 2 | 4 |
+| React Router | H | 2 | 2 | 1 |
+|  Home Page/ About | H | 1 | 1 | 1 |
+| Random Quote Generator/ onclick | H | 4 | 4 | 5 |
+| Form bar for searching through quotes | H | 3 | 3 | 5 |
+| Random Picture/ Gif Generator onClick | M | 3 | 3 | 4 |
+| Form for adding Quotes | M | 2 | 2 | 0 |
+| Data Component for Gifs/ Pictures | M | 2 | 2 | 0 |
+| Adding Content to Data Component | M | 2 | 2 | 0 |
+| Responsive Design | H | 4 | 4 | 4 |
+| CSS/ Styling | H | 8 | 8 | 6 |
+| Implement SASS | M | 3 | 3 | 2 |
+| Total | H | 44 | 44 | 43 |
 
 # Components 
 
@@ -91,3 +94,8 @@ Component Map : https://www.figma.com/file/ycC2YroZNTkoopGOOt0m02/Tronald-Dump-A
 -SASS, React Bootstrap
 
 # Code Snippet
+
+`if (data.count > 0) {
+        const quoteCount = data._embedded.quotes.length;
+        const quoteIndex = Math.floor(Math.random() * quoteCount);
+        const quote = data._embedded.quotes[quoteIndex];`
