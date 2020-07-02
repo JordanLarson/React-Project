@@ -1,3 +1,7 @@
+@import "_config.scss";
+Html {
+  background-color: $tealBlue;
+}
 .App {
   text-align: center;
 }
@@ -35,4 +39,44 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+main {
+  background-color: $sandyBrown;
+  @include flexEverythingCenter();
+}
+$break-small: 320px;
+$break-medium: 700px;
+$break-large: 1080px;
+nav {
+  background-color: $fireBrick;
+  width: 100vw;
+  height: 20vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-radius: 3px;
+  @media screen and (min-width: $break-small) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+h3 {
+  background-color: $blueMunsel;
+  width: 20vw;
+  border-radius: 5px;
+  &:hover {
+    background-color: $tealBlue;
+    box-shadow: 10px 10px 10px $textColor;
+    transform: translateX(-10px);
+  }
+}
+h1 {
+  background-color: $yellowCrayola;
+  height: 20vh;
+  padding-top: 40px;
+  border-radius: 10px;
+  color: $fireBrick;
+  font-weight: 175%;
 }
