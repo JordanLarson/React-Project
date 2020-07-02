@@ -30,7 +30,7 @@ function App(props) {
             style={{ textDecoration: "none", color: "#292f36" }}
             to="/Search"
           >
-            <h3 className="bottom-left"> Search Quotes</h3>
+            <h3 className="bottom-left"> Search</h3>
           </Link>
           <Link
             style={{ textDecoration: "none", color: "#292f36" }}
